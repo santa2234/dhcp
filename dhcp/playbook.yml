@@ -1,0 +1,10 @@
+---
+- hosts: local
+  vars_files: 
+    - "roles/fleur.dhcp6/vars/dhcp.yml"
+    - "roles/fleur.setips/vars/dhcp.yml"
+    - "roles/ansible-role-rh-base/dhcp.yml"
+  roles:
+    - role: "roles/ansible-role-rh-base"
+    - role: "roles/fleur.dhcp6"
+    - role: "roles/fleur.setips"
